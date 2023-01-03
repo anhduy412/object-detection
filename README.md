@@ -7,19 +7,17 @@
 <br/><br/>
 <b>Step 2.</b> Create a new virtual environment 
 <pre>
-python -m venv object-detection
+virtualenv env
 </pre> 
 <br/>
 <b>Step 3.</b> Activate your virtual environment
 <pre>
 source object-detection/bin/activate # Linux
-.\object-detection\Scripts\activate # Windows 
+.\env\Scripts\activate # Windows 
 </pre>
-<b>Step 4.</b> Install dependencies and add virtual environment to the Python Kernel
+<b>Step 4.</b> Install dependencies
 <pre>
-python -m pip install --upgrade pip
-pip install ipykernel
-python -m ipykernel install --user --name=object-detection
+pip install -r requirements.txt
 </pre>
 <br/>
 <b>Step 5.</b> Collect images using the Notebook <b>img-collect.ipynb</b> - ensure you change the kernel to the virtual environment as shown below
